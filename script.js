@@ -24,7 +24,15 @@ function updateThemeToggle() {
     themeToggle.innerHTML = `<i class="fas fa-${isLight ? 'moon' : 'sun'}" aria-hidden="true"></i>`;
 }
 
+function updateThemeIcons() {
+    const isLight = document.documentElement.dataset.theme === 'light';
+    document.querySelectorAll('img[data-light-src][data-dark-src]').forEach(img => {
+        img.src = isLight ? img.dataset.lightSrc : img.dataset.darkSrc;
+    });
+}
+
 updateThemeToggle();
+updateThemeIcons();
 
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -32,6 +40,7 @@ if (themeToggle) {
         document.documentElement.dataset.theme = isLight ? 'dark' : 'light';
         localStorage.setItem('portfolio-theme', isLight ? 'dark' : 'light');
         updateThemeToggle();
+        updateThemeIcons();
     });
 }
 

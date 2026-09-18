@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Auth and security icon">
+  <defs>
+    <linearGradient id="authGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M64 14 92 28v28c0 22-14.5 42-28 52-13.5-10-28-30-28-52V28L64 14Z" fill="url(#authGrad)" opacity="0.16"/>
+    <path d="M64 20 86 31v26c0 20-12.8 38-22 46-9.2-8-22-26-22-46V31L64 20Z" stroke="url(#authGrad)" stroke-width="5"/>
+    <path d="M64 38c-11.5 0-20.8 9.3-20.8 20.8V62h41.6v-3.2C84.8 47.3 75.5 38 64 38Zm0 16.2h-8.7v3.2c0 4.8 3.9 8.7 8.7 8.7s8.7-3.9 8.7-8.7v-3.2H64Zm-2.5 15.5h5v12.2h-5z" fill="url(#authGrad)"/>
+    <circle cx="93" cy="92" r="9" fill="#E2E8F0" opacity="0.9"/>
+    <path d="M90 92h6v6h-6z" fill="#0B1220"/>
+  </g>
+</svg>

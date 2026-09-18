@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="REST API icon">
+  <defs>
+    <linearGradient id="restGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="18" y="24" width="92" height="80" rx="18" fill="rgba(56,189,248,0.08)" stroke="url(#restGrad)" stroke-width="4"/>
+    <path d="M38 50h52M38 64h52M38 78h36" stroke="url(#restGrad)" stroke-width="7"/>
+    <circle cx="94" cy="64" r="10" fill="#0B1220" stroke="url(#restGrad)" stroke-width="4"/>
+    <path d="M94 42v-6M94 86v6M72 64h-6M106 64h-6" stroke="url(#restGrad)" stroke-width="5"/>
+    <path d="M26 98h58" stroke="#E2E8F0" stroke-width="5" opacity="0.8"/>
+  </g>
+</svg>

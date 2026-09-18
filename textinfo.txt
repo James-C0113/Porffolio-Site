@@ -1,0 +1,20 @@
+if you want to become **more specialist**, I would narrow further than “AI software engineer.”
+
+A strong specialization is:
+
+**AI Backend / Agent Infrastructure Engineer**
+
+That means you specialize in building the production systems *behind* AI applications—not just calling an LLM API.
+
+Your technical core would be **Python + FastAPI, PostgreSQL/Redis, Docker, AWS, async/distributed systems, authentication, queues/workers, observability, and CI/CD**. On top of that, specialize in **LLM tool calling, agent orchestration, RAG, vector/search infrastructure, structured outputs, evaluations, guardrails, caching, model routing, and MCP**.
+
+On Upwork, that lets you pursue higher-complexity problems such as: converting an AI prototype into a production system; building an agent that interacts with CRM/ERP/internal APIs; creating multi-tenant RAG infrastructure; implementing reliable tool-calling pipelines; reducing LLM latency/cost; designing evaluation systems; or debugging an AI backend that works in demos but fails under production load.
+
+The positioning difference is important:
+
+> :x: “Full-stack developer | React | Python | AI”
+> :white_check_mark: “AI Backend Engineer | Production LLM Agents, RAG & API Infrastructure”
+
+I would go **even deeper rather than broader** over time. For example, after establishing the AI-backend foundation, specialize in **Agent Infrastructure + MCP + enterprise integrations**. That combination is technically difficult, business-relevant, and much harder to replace with basic AI code generation.
+
+If your objective is **high Upwork income over the next 3–5 years**, this is one of the software-engineering directions I'd seriously consider.

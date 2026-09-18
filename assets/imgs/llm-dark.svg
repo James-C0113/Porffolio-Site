@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="AI LLM logo">
+  <defs>
+    <linearGradient id="llmDarkGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="28" stroke="url(#llmDarkGrad)" stroke-width="6" opacity="0.9"/>
+    <circle cx="36" cy="48" r="10" fill="url(#llmDarkGrad)"/>
+    <circle cx="92" cy="48" r="10" fill="url(#llmDarkGrad)"/>
+    <circle cx="64" cy="96" r="10" fill="url(#llmDarkGrad)"/>
+    <path d="M44 54l14 12M84 54l-14 12M64 68v18" stroke="url(#llmDarkGrad)" stroke-width="5"/>
+    <path d="M26 86c6 8 18 14 38 14s31-6 38-14" stroke="#0F172A" stroke-width="5" opacity="0.8"/>
+  </g>
+</svg>

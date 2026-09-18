@@ -1,0 +1,76 @@
+<svg width="900" height="720" viewBox="0 0 900 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="40" x2="760" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09141F"/>
+      <stop offset="1" stop-color="#111A2B"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="210" y1="160" x2="710" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#122335"/>
+      <stop offset="1" stop-color="#0B1623"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="520" y1="130" x2="760" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3EE0A1"/>
+      <stop offset="1" stop-color="#62D9FF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="720" fill="url(#bg)"/>
+  <circle cx="725" cy="115" r="120" fill="#20C997" opacity="0.12"/>
+  <circle cx="175" cy="610" r="140" fill="#47D0FF" opacity="0.10"/>
+  <circle cx="780" cy="560" r="160" fill="#29A7A3" opacity="0.10"/>
+
+  <g opacity="0.9">
+    <rect x="120" y="90" width="660" height="480" rx="32" fill="url(#panel)" stroke="rgba(255,255,255,0.12)"/>
+    <rect x="150" y="120" width="600" height="48" rx="16" fill="#0E1B2A"/>
+    <circle cx="182" cy="144" r="6" fill="#FF5F57"/>
+    <circle cx="204" cy="144" r="6" fill="#FEBC2E"/>
+    <circle cx="226" cy="144" r="6" fill="#28C840"/>
+
+    <rect x="170" y="202" width="240" height="252" rx="22" fill="#0D1827" stroke="rgba(126,255,219,0.18)"/>
+    <rect x="438" y="202" width="282" height="114" rx="20" fill="#0D1827" stroke="rgba(126,255,219,0.18)"/>
+    <rect x="438" y="338" width="282" height="116" rx="20" fill="#0D1827" stroke="rgba(126,255,219,0.18)"/>
+
+    <g opacity="0.95">
+      <path d="M210 250H320" stroke="#8AE7C5" stroke-width="8" stroke-linecap="round"/>
+      <path d="M210 278H342" stroke="#66D9EF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M210 306H290" stroke="#5ED4B8" stroke-width="8" stroke-linecap="round"/>
+      <path d="M210 362H340" stroke="#7EC1FF" stroke-width="8" stroke-linecap="round"/>
+      <path d="M210 390H310" stroke="#8AE7C5" stroke-width="8" stroke-linecap="round"/>
+      <path d="M210 418H290" stroke="#7EC1FF" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+    <g>
+      <rect x="470" y="230" width="88" height="12" rx="6" fill="#7CE7C4" opacity="0.9"/>
+      <rect x="470" y="256" width="142" height="10" rx="5" fill="#D9F7FF" opacity="0.7"/>
+      <rect x="470" y="278" width="110" height="10" rx="5" fill="#D9F7FF" opacity="0.5"/>
+
+      <rect x="470" y="366" width="142" height="12" rx="6" fill="#7CE7C4" opacity="0.9"/>
+      <rect x="470" y="392" width="170" height="10" rx="5" fill="#D9F7FF" opacity="0.7"/>
+      <rect x="470" y="414" width="126" height="10" rx="5" fill="#D9F7FF" opacity="0.5"/>
+
+      <rect x="640" y="230" width="48" height="48" rx="14" fill="url(#accent)" filter="url(#glow)"/>
+      <path d="M654 254L665 265L680 246" stroke="#05181C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="640" y="366" width="48" height="48" rx="14" fill="#6ED6FF" opacity="0.9"/>
+      <path d="M655 392H675" stroke="#081A27" stroke-width="5" stroke-linecap="round"/>
+      <path d="M665 382V402" stroke="#081A27" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <g opacity="0.9">
+      <rect x="154" y="505" width="180" height="14" rx="7" fill="#1B2A3D"/>
+      <rect x="348" y="505" width="128" height="14" rx="7" fill="#1B2A3D"/>
+      <rect x="490" y="505" width="220" height="14" rx="7" fill="#1B2A3D"/>
+    </g>
+  </g>
+
+  <g filter="url(#glow)" opacity="0.9">
+    <path d="M616 118L690 190" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M280 122L216 192" stroke="#62D9FF" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
