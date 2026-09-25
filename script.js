@@ -243,19 +243,31 @@ if (form) {
         try {
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
                 body: new FormData(form)
             });
-            
-            const data = await response.json();
-            
-            if (data.success) {
+
+            let data = { success: false };
+            try {
+                data = await response.json();
+            } catch {
+                data = { success: false };
+            }
+
+            if (response.ok && data.success) {
                 showToast('Message sent successfully! I\'ll get back to you soon.', false);
                 form.reset();
             } else {
-                showToast('Something went wrong. Please try WhatsApp instead.', true);
+                const errorMessage = data?.message || data?.error || 'Something went wrong while sending the message.';
+                showToast(errorMessage, true);
             }
         } catch (error) {
-            showToast('Connection error. Please try WhatsApp instead.', true);
+            const message = location.protocol === 'file:'
+                ? 'Please open this site through a local server or live website before sending.'
+                : 'Connection error. Please try WhatsApp instead.';
+            showToast(message, true);
         }
         
         if (submitBtn) {

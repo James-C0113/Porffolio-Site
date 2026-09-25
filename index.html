@@ -39,7 +39,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body oncontextmenu="return false;">
+    <script>
+        document.addEventListener('keydown', function (event) {
+            const forbidden = [
+                'F12',
+                'Shift+F12',
+                'Ctrl+Shift+I',
+                'Ctrl+Shift+C',
+                'Ctrl+U',
+                'Ctrl+S'
+            ];
+
+            const pressed = [];
+            if (event.ctrlKey) pressed.push('Ctrl');
+            if (event.shiftKey) pressed.push('Shift');
+            if (event.altKey) pressed.push('Alt');
+            pressed.push(event.key);
+
+            const combo = pressed.join('+');
+            if (forbidden.includes(combo) || forbidden.includes(event.key)) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
     <!-- Loader -->
     <div class="loader" id="loader">
         <div class="loader-content">
@@ -801,7 +825,7 @@
                             </div>
                             <div>
                                 <h4>Email</h4>
-                                <a href="mailto:elitewarrior@gmail.com">jamescarter11333@gmail.com</a>
+                                <a href="mailto:elitewarrior0113@gmail.com">elitewarrior0113@gmail.com</a>
                             </div>
                         </div>
 
@@ -822,7 +846,8 @@
                     id="contactForm" novalidate>
 
                     <!-- Web3Forms Configuration -->
-                    <input type="hidden" name="access_key" value="e06a63e7-3679-4c1f-a227-b75763755520">
+                    <input type="hidden" name="access_key" value="2c47f9b1-0aba-4991-9f5a-058c4d78fa5f">
+                    <input type="hidden" name="to" value="elitewarrior0113@gmail.com">
                     <input type="hidden" name="subject" value="New Project Inquiry - James Portfolio 2026">
                     <input type="hidden" name="from_name" value="Portfolio Contact Form">
                     <input type="hidden" name="redirect" value="https://web3forms.com/success">
