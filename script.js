@@ -118,6 +118,162 @@ document.querySelectorAll('.skill-progress').forEach(bar => {
     skillObserver.observe(bar);
 });
 
+// ==================== SKILL GROUP TOGGLE ====================
+const showMoreSkillsBtn = document.getElementById('showMoreSkills');
+const skillGroups = document.querySelectorAll('.skill-group');
+
+if (showMoreSkillsBtn && skillGroups.length > 2) {
+    let isExpanded = false;
+    const hiddenGroups = Array.from(skillGroups).slice(2);
+
+    const updateSkillsToggle = () => {
+        hiddenGroups.forEach(group => {
+            group.classList.toggle('is-collapsed', !isExpanded);
+        });
+
+        showMoreSkillsBtn.setAttribute('aria-expanded', String(isExpanded));
+        const text = showMoreSkillsBtn.querySelector('.show-more-text');
+        const icon = showMoreSkillsBtn.querySelector('i');
+
+        if (text) text.textContent = isExpanded ? 'Show Less' : 'Show More';
+        if (icon) icon.classList.toggle('fa-chevron-up', isExpanded);
+        if (icon) icon.classList.toggle('fa-chevron-down', !isExpanded);
+    };
+
+    updateSkillsToggle();
+    showMoreSkillsBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        updateSkillsToggle();
+    });
+}
+
+// ==================== PROJECT MODAL ====================
+const projectModalData = {
+    llmvault: {
+        title: 'LLMVault',
+        tags: ['LLM Security', 'Cyber Lab'],
+        summary: 'A practical LLM security lab focused on prompt injection, RAG abuse, agent misuse, and data leakage risks through realistic training scenarios.',
+        stack: ['Python', 'Flask', 'Ollama'],
+        liveUrl: 'https://james-vault.vercel.app/',
+        githubUrl: 'https://github.com/jamescarter/llm-vault',
+        image: 'project-image-one'
+    },
+    htmlcreator: {
+        title: 'HTML Creator',
+        tags: ['HTML', 'Web Design'],
+        summary: 'A fast HTML generation workspace for creating organized, responsive pages with reusable sections and clean semantic layouts.',
+        stack: ['HTML', 'CSS', 'JavaScript'],
+        liveUrl: 'https://html-creator-next.vercel.app/',
+        githubUrl: 'https://github.com/jamescarter/html-creator',
+        image: 'project-image-two'
+    },
+    commerceapi: {
+        title: 'Multi-Vendor Commerce API',
+        tags: ['Marketplace', 'Payments'],
+        summary: 'A marketplace backend for vendor management, inventory control, order orchestration, and secure buyer-seller workflows.',
+        stack: ['Python', 'FastAPI', 'AWS'],
+        liveUrl: 'https://e-commerce-client-ten-sigma.vercel.app',
+        githubUrl: 'https://github.com/jamescarter/marketplace-api',
+        image: 'project-image-three'
+    },
+    datapulse: {
+        title: 'DataPulse Analytics',
+        tags: ['Analytics', 'Dashboard'],
+        summary: 'An insight dashboard for monitoring revenue trends, conversion metrics, and key operational signals through a clear executive interface.',
+        stack: ['React', 'Charts', 'Node'],
+        liveUrl: '#',
+        githubUrl: 'https://github.com/jamescarter/data-pulse',
+        image: 'project-image-four'
+    },
+    promptflow: {
+        title: 'PromptFlow Studio',
+        tags: ['AI', 'Automation'],
+        summary: 'A workflow studio for building AI task chains, reusable prompts, and operational automations across internal and client-facing processes.',
+        stack: ['Python', 'OpenAI', 'FastAPI'],
+        liveUrl: '#',
+        githubUrl: 'https://github.com/jamescarter/prompt-flow',
+        image: 'project-image-five'
+    },
+    clientflow: {
+        title: 'ClientFlow CRM',
+        tags: ['CRM', 'Workflow'],
+        summary: 'A client operations platform built to centralize deals, workflows, onboarding steps, and communication tracking for service businesses.',
+        stack: ['Next.js', 'PostgreSQL', 'Auth'],
+        liveUrl: '#',
+        githubUrl: 'https://github.com/jamescarter/client-flow-crm',
+        image: 'project-image-six'
+    }
+};
+
+const projectModal = document.getElementById('projectModal');
+const projectModalTitle = document.getElementById('projectModalTitle');
+const projectModalSummary = document.getElementById('projectModalSummary');
+const projectModalImage = document.getElementById('projectModalImage');
+const projectModalDemo = document.getElementById('projectModalDemo');
+const projectModalGithub = document.getElementById('projectModalGithub');
+
+function openProjectModal(projectKey) {
+    const project = projectModalData[projectKey];
+    if (!project || !projectModal) return;
+
+    projectModalTitle.textContent = project.title;
+    projectModalSummary.textContent = project.summary;
+    projectModalImage.className = `project-modal-image ${project.image}`;
+
+    if (projectModalDemo) {
+        projectModalDemo.href = project.liveUrl || '#';
+        projectModalDemo.style.display = project.liveUrl ? 'inline-flex' : 'none';
+    }
+
+    if (projectModalGithub) {
+        projectModalGithub.href = project.githubUrl || '#';
+        projectModalGithub.style.display = project.githubUrl ? 'inline-flex' : 'none';
+    }
+
+    projectModal.classList.add('active');
+    projectModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    if (!projectModal) return;
+    projectModal.classList.remove('active');
+    projectModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.portfolio-video-card').forEach(card => {
+    const projectKey = card.dataset.project;
+    if (!projectKey) return;
+
+    card.addEventListener('click', () => openProjectModal(projectKey));
+    card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openProjectModal(projectKey);
+        }
+    });
+});
+
+if (projectModal) {
+    projectModal.addEventListener('click', (event) => {
+        if (event.target.matches('[data-close-modal="true"]') || event.target === projectModal) {
+            closeProjectModal();
+        }
+    });
+
+    const modalCloseButton = document.querySelector('.project-modal-close');
+    if (modalCloseButton) {
+        modalCloseButton.addEventListener('click', closeProjectModal);
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && projectModal.classList.contains('active')) {
+            closeProjectModal();
+        }
+    });
+}
+
 // ==================== NUMBER COUNTER ====================
 const countObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -150,65 +306,6 @@ const countObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('[data-count]').forEach(num => {
     countObserver.observe(num);
 });
-
-// ==================== TESTIMONIALS SLIDER ====================
-const track = document.getElementById('testimonialTrack');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const dots = document.querySelectorAll('.testimonial-dot');
-let currentSlide = 0;
-const totalSlides = dots.length;
-let autoPlayInterval;
-
-function updateSlider() {
-    if (!track) return;
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    dots.forEach((dot, index) => {
-        const isActive = index === currentSlide;
-        dot.classList.toggle('active', isActive);
-        dot.setAttribute('aria-selected', isActive);
-    });
-}
-
-function goToSlide(index) {
-    currentSlide = index;
-    updateSlider();
-    resetAutoPlay();
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateSlider();
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateSlider();
-}
-
-function resetAutoPlay() {
-    clearInterval(autoPlayInterval);
-    autoPlayInterval = setInterval(nextSlide, 6000);
-}
-
-if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
-if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
-
-dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-        goToSlide(parseInt(dot.getAttribute('data-index')));
-    });
-});
-
-// Start autoplay
-if (totalSlides > 0) autoPlayInterval = setInterval(nextSlide, 6000);
-
-// Pause on hover
-const testimonialWrapper = document.querySelector('.testimonials-wrapper');
-if (testimonialWrapper) {
-    testimonialWrapper.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-    testimonialWrapper.addEventListener('mouseleave', resetAutoPlay);
-}
 
 // ==================== FORM SUBMISSION ====================
 const form = document.getElementById('contactForm');
