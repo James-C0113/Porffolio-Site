@@ -1,0 +1,46 @@
+AI Full Stack Developer | SaaS, React, Next.js, Python, Claude
+$69.00/hr
+
+
+Upwork Profile Overview
+AI Full-Stack Developer | SaaS, AI Applications & Automation
+
+AI Full-Stack Developer with 8 years of software development experience, specializing in scalable SaaS platforms, AI-powered applications, and workflow automation.
+
+I build AI features for existing products as well as custom business software—from intelligent assistants connected to your data and APIs to AI-powered workflows that can take approved business actions.
+
+My recent work focuses on AI integration and automation, using technologies such as Python, React, PostgreSQL, n8n, LLMs, and AI agents. I’ve worked on projects including healthcare automation platforms, AI comparison applications, and cloud-based systems designed to improve productivity and streamline business processes.
+
+What I can help you with
+AI-powered web applications
+Custom SaaS platforms
+AI agents and LLM integrations
+AI assistants connected to business data and APIs
+Workflow automation with n8n
+React and Python applications
+REST API development and integration
+PostgreSQL database design
+Cloud-native application architecture
+Integrating AI into existing applications
+Improving and maintaining existing software
+
+I care about building solutions that are reliable, scalable, and easy to maintain, while keeping communication clear throughout the development process.
+
+If you have an existing application that needs AI capabilities, or you're starting a new AI-powered product from scratch, I can help turn the idea into a working solution.
+
+
+Skills
+API Integration
+Back-End Development
+AI Chatbot
+Automation
+Python
+REST API
+React
+FastAPI
+Websockets
+OpenAI Realtime API
+WebRTC
+Conversational AI
+TypeScript
+Node.js
