@@ -172,7 +172,7 @@ const projectModalData = {
         tags: ['Marketplace', 'Payments'],
         summary: 'A marketplace backend for vendor management, inventory control, order orchestration, and secure buyer-seller workflows.',
         stack: ['Python', 'FastAPI', 'AWS'],
-        liveUrl: 'https://e-commerce-client-ten-sigma.vercel.app',
+        liveUrl: 'https://spreecommerce.org',
         githubUrl: 'https://github.com/jamescarter/marketplace-api',
         image: 'project-image-three'
     },
@@ -181,7 +181,7 @@ const projectModalData = {
         tags: ['Analytics', 'Dashboard'],
         summary: 'An insight dashboard for monitoring revenue trends, conversion metrics, and key operational signals through a clear executive interface.',
         stack: ['React', 'Charts', 'Node'],
-        liveUrl: '#',
+        liveUrl: 'https://datapulseanalytics.com',
         githubUrl: 'https://github.com/jamescarter/data-pulse',
         image: 'project-image-four'
     },
@@ -190,7 +190,7 @@ const projectModalData = {
         tags: ['AI', 'Automation'],
         summary: 'A workflow studio for building AI task chains, reusable prompts, and operational automations across internal and client-facing processes.',
         stack: ['Python', 'OpenAI', 'FastAPI'],
-        liveUrl: '#',
+        liveUrl: 'https://prompthero.com',
         githubUrl: 'https://github.com/jamescarter/prompt-flow',
         image: 'project-image-five'
     },
@@ -199,7 +199,7 @@ const projectModalData = {
         tags: ['CRM', 'Workflow'],
         summary: 'A client operations platform built to centralize deals, workflows, onboarding steps, and communication tracking for service businesses.',
         stack: ['Next.js', 'PostgreSQL', 'Auth'],
-        liveUrl: '#',
+        liveUrl: 'https://mybizsuite.com/',
         githubUrl: 'https://github.com/jamescarter/client-flow-crm',
         image: 'project-image-six'
     }
